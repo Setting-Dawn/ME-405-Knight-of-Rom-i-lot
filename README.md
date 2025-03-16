@@ -39,4 +39,5 @@ The IMU recalibrates each time it is powered on and switched into a mode other t
 
 ![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/763c06c5-af27-4378-a108-7e49cacac6d7)
 
+https://youtube.com/shorts/Kf_3iBvN05o?feature=share
 
