@@ -37,5 +37,6 @@ The IMU recalibrates each time it is powered on and switched into a mode other t
   1. According to the documentation, to get yaw angle values, the 0x18 register can be read, and the returned value divided by 900 or 16 to get radians or degrees respectively. However, using this calculation, the yaw angle reports readings from 0 to 6.4 radians.
   2. If the reference angle is above pi, the equation (current heading - reference angle) will produce a harsh jump as the actual heading rotates past it's maximum value and becomes 0. This can be adjusted for by adding 2 pi to the current heading if the current heading is less than (reference angle - pi). This adjustment was not initially included, which caused Romi to occasionally begin spinning uncontrollably when new angles brought Romi near the discontinuity.
 
-https://github.com/user-attachments/assets/6916d910-6ae2-4e9a-821e-7e52f51919fb
+![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/763c06c5-af27-4378-a108-7e49cacac6d7)
+
 
