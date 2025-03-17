@@ -9,7 +9,7 @@ This code utilizes the files task_share.py and cotask.py from the ME 405 Support
 The following track was provided as the course Romi must drive. It includes:
   1. Numbered checkpoints, which must be reached in numerical order.
   2. Lines that can be detected via IR sensor.
-  3. 2 Optional Objectives that can be pushed out of the circles to recieve a 5 second bonus for a total of 10 seconds.
+  3. Two Optional Objectives that can be pushed out of the circles to receive a 5 second bonus for a total of 10 seconds.
   4. A metal cage section in which the Line ceases after Checkpoint 4 so Romi must be able to navigate via other methods.
   5. A wall at the end of the course that must be interacted with at least once and must be navigated around to reach the finish.
      
