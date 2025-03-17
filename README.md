@@ -63,6 +63,7 @@ Components:
 • BNO055 IMU
 • Modified Shoe of Brian
 • Acrylic Romi-to-Shoe Adapter
+• HC-05 Bluetooth Module
 • QTR-MD-13A IR Sensor (PN 4253)
 • Left (PN 3673) and Right (PN 3674) Bumper Switch Assemblies for Romi
 • 3D Printed IR and Bump Sensor Mount
