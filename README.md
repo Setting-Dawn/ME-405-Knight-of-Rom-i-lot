@@ -6,6 +6,8 @@ This repository was created to document Team Mecha35's methods of making a two-w
 
 ## Utilized Code:
 This code utilizes the files task_share.py and cotask.py from the ME 405 Support Library, as well as as the structure of basic_task.py. This repository can be found here: https://github.com/spluttflob/ME405-Support
+These files were used in accordance with the license included in the repository, which was also included with this repository for clarity
+
 
 ## The Goal
 The following track was provided as the course Romi must drive. It includes:
@@ -52,8 +54,6 @@ The state transition diagrams for each task are as seen above. The Communicate T
 ![RomiControlBlockDiagram](https://github.com/user-attachments/assets/80a6d18f-53b8-4c45-9578-b6a5e4068dfd)
 
 
-
-
 ## Mechanical Design
 Components:
 - NUCLEO L476RG
@@ -76,6 +76,13 @@ In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acryl
 All the components mounted onto the chassis is shown below.
 ![IMG_5030](https://github.com/user-attachments/assets/107a2a1d-a950-4250-a2ed-8bed43ad1a16)
 
+
+### ![Trial Video](https://youtube.com/shorts/Kf_3iBvN05o?feature=share)
+
+[<img src="https://github.com/user-attachments/assets/c43b9d0d-15a9-4768-8c70-00cf0dd73db2" width="270" height="480">](https://youtube.com/shorts/Kf_3iBvN05o?feature=share)
+![Untitled Diagram drawio](https://github.com/user-attachments/assets/f7590166-38d4-48ed-b110-abad4e325ce3)
+
+![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
 ## Electrical Design
 ## Analysis
 We performed analysis on the motor we received early on to experimentally determine theoretical gain, startup effort, and time constants for each motor shown below.
@@ -85,5 +92,79 @@ We performed analysis on the motor we received early on to experimentally determ
 | Motor Startup Effort | 3.19%| 3.31% |
 |Time Constant [s]| 0.0874 |0.0895|
 
-![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
+### Task Shares
+| Share | data type | Purpose |
+|--|--|--|
+| m_effL | signed byte | Instruct the Left Motor what direction and PWM to use |
+| m_effR | signed byte | Instruct the Right Motor what direction and PWM to use |
+| RunL | unsigned byte | Whether the Left motor should be enabled |
+| RunR | unsigned byte | Whether the Right motor should be enabled |
+| RunR | unsigned byte | Whether the Right motor should be enabled |
+| encoderReadL | signed float | The number of radians the Left Encoder has rotated since zeroing |
+| encoderReadR | signed float | The number of radians the Right Encoder has rotated since zeroing |
+||||
+| IRRead | unsigned byte | Whether the IR sensor array should be enabled |
+| IRcentroid | signed float | Reports the current centroid calculation from the line reader |
+| IRgoal | unsigned byte | Communicates a requested offset from the line |
+| IR_shares | unsigned int* | *Actually contains 13 shares each reporting the individual sensor readings |
+| IRerror | signed float | Reports the current difference between desired and actual centroid |
+||||
+| IMUerror | signed float | Reports the current difference between desired and actual centroid |
+| enableCompass | unsigned byte | Request steering via the IMU heading |
+| undateNorth | unsigned byte | Whether the reference angle should be recalibrated |
+| idealHeading | signed float | The heading Romi should be facing, measured relative to its reference angle |
+| idealHeading | signed float | The heading Romi should be facing, measured relative to its reference angle |
+| IMUBraine | signed float | The difference between the desired and actual heading |
+||||
+| BumpEnable | unsigned byte | Contains a flag enabling or disabling the bump sensors |
+| BumperTrigger | unsigned byte | Contains a flag that is raised by the Bump task and acknoledged by the Brain task |
 
+## Electrical Setup
+### Motor and Encoder Wiring
+| Function | Pin | Notes |
+|--------|-----|---------|
+| Left Encoder Ch.A | PB_4 | Uses Timer 3 |
+| Left Encoder Ch.B | PB_5 | Uses Timer 3 |
+| Left Motor Enable | PC_9 |  |
+| Left Motor Direction | PC_8 |  |
+| Left Motor PWM | PB_10 | Uses Timer 2 |
+| | | |
+| Right Encoder Ch.A | PC_6 | Uses Timer 8 |
+| Right Encoder Ch.B | PC_7 | Uses Timer 8 |
+| Right Motor Enable | PA_10 |  |
+| Right Motor Direction | PB_13 |  |
+| Right Motor PWM | PB_3 | Uses Timer 2 |
+
+### Bump Sensors
+| Sensor | Pin |
+|--------|-----|
+| 0      | PA_15 |
+| 1      | PH_0 |
+| 2      | PH_1 |
+| 3      | PC_12 |
+| 4      | PC_10 |
+| 5      | PC_11 |
+
+### IR Sensor
+| Sensor | Pin |
+|--------|-----|
+| 1      | PC_4 |
+| 2      | PB_1 |
+| 3      | PC_0 |
+| 4      | PA_7 |
+| 5      | PC_1 |
+| 6      | PA_6 |
+| 7      | PB_0 |
+| 8      | PC_5 |
+| 9      | PA_4 |
+| 10      | PC_3 |
+| 11      | PA_1 |
+| 12      | PC_2 |
+| 13      | PA_0 |
+
+### IMU Pins
+| Purpose | Pin | Notes |
+|--------|-----|--------|
+| Reset Pin | PB_2 | Is a notResetPin, so resets if pulled low|
+| IMU SDA | PB_9 | Alt function AF4_I2C |
+| IMU SCL | PB_8 | Alt function AF4_I2C |

@@ -696,8 +696,8 @@ if __name__ == "__main__":
     # Create Required Shares
     m_effL = task_share.Share('b', thread_protect=False, name="L Motor Effort")
     m_effR = task_share.Share('b', thread_protect=False, name="R Motor Effort")
-    RunL = task_share.Share('b', thread_protect=False, name="L Motor Run Flg")
-    RunR = task_share.Share('b', thread_protect=False, name="R Motor Run Flg")
+    RunL = task_share.Share('B', thread_protect=False, name="L Motor Run Flg")
+    RunR = task_share.Share('B', thread_protect=False, name="R Motor Run Flg")
 
     IRRead = task_share.Share('B', thread_protect=False, name="Read IR Mode")
     IRcentroid = task_share.Share('f', thread_protect=False, name="Centroid Location")
@@ -710,8 +710,8 @@ if __name__ == "__main__":
     IR_shares = tuple(IR_shares)
     IRerror = task_share.Share('f', thread_protect=False, name="Centroid Error")
     IMUerror = task_share.Share('f', thread_protect=False, name="Heading Error")
-    enableCompass = task_share.Share('b', thread_protect=False, name="Compass Enable")
-    updateNorth = task_share.Share('b', thread_protect=False, name="Update North")
+    enableCompass = task_share.Share('B', thread_protect=False, name="Compass Enable")
+    updateNorth = task_share.Share('B', thread_protect=False, name="Update North")
     enableCompass.put(False)
     updateNorth.put(False)
     idealHeading = task_share.Share('f', thread_protect=False, name="Ideal Heading")
