@@ -54,7 +54,7 @@ The state transition diagrams for each task are as seen above. The Communicate T
 
 
 
-### Mechanical Design
+## Mechanical Design
 Components:
 - NUCLEO L476RG
 - Romi Chassis (PN 3500, 3501, 3502, 3504, 3506, or 3509)
@@ -76,4 +76,14 @@ In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acryl
 All the components mounted onto the chassis is shown below.
 ![IMG_5030](https://github.com/user-attachments/assets/107a2a1d-a950-4250-a2ed-8bed43ad1a16)
 
-### Electrical Design
+## Electrical Design
+## Analysis
+We performed analysis on the motor we received early on to experimentally determine theoretical gain, startup effort, and time constants for each motor shown below.
+| Parameter | Left Motor | Right Motor |
+| -------- | ------- |-------|
+| Motor Gain [rad/V*s]  | 4.045  |3.94|
+| Motor Startup Effort | 3.19%| 3.31% |
+|Time Constant [s]| 0.0874 |0.0895|
+
+![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
+
