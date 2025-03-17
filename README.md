@@ -15,6 +15,7 @@ These files were used in accordance with the license included in the repository,
  - ![Goal](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#The_Goal)
  - ![Solution](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#The_Solution)
    - ![Assumptions](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Assumptions)
+     - ![Validity](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#The_(in)Validity_of_Assumptions)
    - ![Video Demo](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Trial_Video)
    - ![Task and State Diagram](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Task_Diagram)
    - ![Mechanical Design](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Mechanical_Design)
@@ -42,8 +43,9 @@ This method of travel relies heavily on two main assumptions:
   1. The wheels do not slip while driving.
   2. The magnetometer remains consistent.
 
+### The (in)Validity of Assumptions
 While the wheels do not generally slip when a more moderate effort is requested from the motors, the higher speeds requested caused some slipping during the initial acceleration. This slipping was accounted for via 3 methods.
-  1. The wheels were regularly cleaned of dust & debris by lightly wiping them with a damp paper towel.
+  1. The wheels were regularly cleaned of dust & larger debris by lightly wiping them with a damp paper towel.
   2. The batteries were regularly recharged so that decreasing voltage did not affect the requested effort.
   3. Any remaining slip was experimentally calibrated into the distance Romi was instructed to travel.
   4. Slipping was not a concern during turning, as the distance travelled was not being recorded during turns and instead relied solely on data from the IMU to ensure the correct angle was reached.
@@ -108,7 +110,7 @@ Components:
 - Left (PN 3673) and Right (PN 3674) Bumper Switch Assemblies for Romi
 - 3D Printed IR and Bump Sensor Mount
 
-In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acrylic adapter was connnected with standoffs. A 3D printed mount was also designed to connect both the IR sensor and the bump sensors. The IR sensor was too wide to mount directly on the chassis and extended past where the bump sensors mounted directly on the chassis, so a custom mount was design to connect both to the chassis. A CAD model of the mount is shown below as well as how it connects to the bump and IR sensors.
+In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acrylic adapter was connnected with standoffs. A 3D printed mount was also designed to connect both the IR sensor and the bump sensors. The IR sensor was too wide to mount directly on the chassis and extended past where the bump sensors mounted directly on the chassis, so a custom mount was designed to connect both to the chassis. A CAD model of the mount is shown below as well as how it connects to the bump and IR sensors.
 
 ![ROMI IR and Bump Sensor Mount](https://github.com/user-attachments/assets/86ec684a-8dd7-47da-a822-b66707920ebe)
 ![ROMI Mount and Sensor Assembly](https://github.com/user-attachments/assets/56e1de6e-5c31-42a9-8684-dd2f80804367)
