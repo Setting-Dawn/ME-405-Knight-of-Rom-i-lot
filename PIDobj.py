@@ -11,6 +11,10 @@ class PID:
         self.reset()
 
     def update(self,error,dT):
+        '''Returns a signal based on the sum of: \n
+          Kp * error \n
+          Ki * accumulated error \n
+          Kd * the change in error \n'''
         self.integErr += error*dT
         if self.integErr > self.maxErr:
             self.integErr = self.maxErr
@@ -26,6 +30,7 @@ class PID:
         return Pcontribute + Icontribute + Dcontribute
     
     def reset(self):
+        '''Clears all stored non-constant values including accumulated error'''
         self.integErr = 0
         self.prev_error = None
         self.de_dt = 0

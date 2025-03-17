@@ -19,6 +19,7 @@ class IRcontroller:
         self.ctrl.low()
     
     def lowPower(self):
+        '''Repeatedly lowering and raising the control pins reduces the current used'''
         n = 28
         while n > 0:
             self.ctrl.low()
@@ -28,22 +29,27 @@ class IRcontroller:
             n -= 1
 
     def reset(self):
+        '''Calls the reset method on all contained IR sensors'''
         for pin in self.pins:
             pin.reset()
                 
     def calibrateHigh(self):
+        '''Calls the calibrateHigh method on all contained IR sensors'''
         for pin in self.pins:
             pin.calibrateHigh()
 
     def calibrateLow(self):
+        '''Calls the calibrateLow method on all contained IR sensors'''
         for pin in self.pins:
             pin.calibrateLow()
                 
     def calibrateRange(self):
+        '''Calls the calibrateRange method on all contained IR sensors'''
         for pin in self.pins:
             pin.calibrateRange()
 
     def update(self):
+        '''Return all updates from contained IR sensors'''
         return [pin.update() for pin in self.pins]
 
     
