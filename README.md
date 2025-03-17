@@ -16,8 +16,9 @@ These files were used in accordance with the license included in the repository,
  - ![Solution](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#The_Solution)
    - ![Assumptions](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Assumptions)
    - ![Video Demo](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Trial_Video)
-   - ![Task Diagram](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Task_Diagram)
-   - ![State Diagram](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#State_Diagram)
+   - ![Task and State Diagram](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Task_Diagram)
+   - ![Mechanical Design](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Mechanical_Design)
+   - ![Electrical Design](https://github.com/Setting-Dawn/ME-405-Knight-of-Rom-i-lot/README.me#Electrical_Design)
 
 ## The Goal
 The following track was provided as the course Romi must drive. It includes:
