@@ -56,17 +56,17 @@ The state transition diagrams for each task are as seen above. The Communicate T
 
 ### Mechanical Design
 Components:
-• NUCLEO L476RG
-• Romi Chassis (PN 3500, 3501, 3502, 3504, 3506, or 3509)
-• Motor Driver and Power Distribution Board for Romi Chassis (PN 3543)
-• Romi Encoder Pair Kit (PN 3542)
-• BNO055 IMU
-• Modified Shoe of Brian
-• Acrylic Romi-to-Shoe Adapter
-• HC-05 Bluetooth Module
-• QTR-MD-13A IR Sensor (PN 4253)
-• Left (PN 3673) and Right (PN 3674) Bumper Switch Assemblies for Romi
-• 3D Printed IR and Bump Sensor Mount
+- NUCLEO L476RG
+- Romi Chassis (PN 3500, 3501, 3502, 3504, 3506, or 3509)
+- Motor Driver and Power Distribution Board for Romi Chassis (PN 3543)
+- Romi Encoder Pair Kit (PN 3542)
+- BNO055 IMU
+- Modified Shoe of Brian
+- Acrylic Romi-to-Shoe Adapter
+- HC-05 Bluetooth Module
+- QTR-MD-13A IR Sensor (PN 4253)
+- Left (PN 3673) and Right (PN 3674) Bumper Switch Assemblies for Romi
+- 3D Printed IR and Bump Sensor Mount
 
 In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acrylic adapter was connnected with standoffs. A 3D printed mount was also designed to connect both the IR sensor and the bump sensors. The IR sensor was too wide to mount directly on the chassis and extended past where the bump sensors mounted directly on the chassis, so a custom mount was design to connect both to the chassis. A CAD model of the mount is shown below as well as how it connects to the bump and IR sensors.
 
