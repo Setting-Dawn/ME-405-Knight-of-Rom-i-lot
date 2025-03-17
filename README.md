@@ -42,4 +42,5 @@ The IMU recalibrates each time it is powered on and switched into a mode other t
 ### ![Trial Video](https://youtube.com/shorts/Kf_3iBvN05o?feature=share)
 
 [<img src="https://github.com/user-attachments/assets/c43b9d0d-15a9-4768-8c70-00cf0dd73db2" width="270" height="480">](https://youtube.com/shorts/Kf_3iBvN05o?feature=share)
+![Untitled Diagram drawio](https://github.com/user-attachments/assets/f7590166-38d4-48ed-b110-abad4e325ce3)
 
