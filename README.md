@@ -37,7 +37,30 @@ The IMU recalibrates each time it is powered on and switched into a mode other t
   1. According to the documentation, to get yaw angle values, the 0x18 register can be read, and the returned value divided by 900 or 16 to get radians or degrees respectively. However, using this calculation, the yaw angle reports readings from 0 to 6.4 radians.
   2. If the reference angle is above pi, the equation (current heading - reference angle) will produce a harsh jump as the actual heading rotates past it's maximum value and becomes 0. This can be adjusted for by adding 2 pi to the current heading if the current heading is less than (reference angle - pi). This adjustment was not initially included, which caused Romi to occasionally begin spinning uncontrollably when new angles brought Romi near the discontinuity.
 
-![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/763c06c5-af27-4378-a108-7e49cacac6d7)
+![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/192095ba-8daa-4bbe-a013-ef135f6cc942)
+
 
 !(https://youtube.com/shorts/Kf_3iBvN05o?feature=share)
+
+### Mechanical Design
+Components:
+• NUCLEO L476RG
+• Romi Chassis (PN 3500, 3501, 3502, 3504, 3506, or 3509)
+• Motor Driver and Power Distribution Board for Romi Chassis (PN 3543)
+• Romi Encoder Pair Kit (PN 3542)
+• BNO055 IMU
+• Modified Shoe of Brian
+• Acrylic Romi-to-Shoe Adapter
+• QTR-MD-13A IR Sensor (PN 4253)
+• Left (PN 3673) and Right (PN 3674) Bump Sensor Assemblies
+• 3D Printed IR and Bump Sensor Mount
+
+In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acrylic adapter was connnected with standoffs. A 3D printed mount was also designed to connect both the IR sensor and the bump sensors. The IR sensor was too wide to mount directly on the chassis and extended past where the bump sensors mounted directly on the chassis, so a custom mount was design to connect both to the chassis. A CAD model of the mount is shown below as well as how it connects to the bump and IR sensors.
+
+![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/cece6e82-4d74-4782-8cf9-77713ab1ba78)
+![ROMI Mount and Sensor Assembly](https://github.com/user-attachments/assets/56e1de6e-5c31-42a9-8684-dd2f80804367)
+
+All the components mounted onto the chassis is shown below.
+![IMG_5030](https://github.com/user-attachments/assets/107a2a1d-a950-4250-a2ed-8bed43ad1a16)
+
 
