@@ -175,6 +175,7 @@ We performed analysis on the motors we received early on to experimentally deter
 |Time Constant [s]| 0.0874 |0.0895|
 
 The following plots were created from data collected from the left motor with similar analyis done on the right motor to get the values in the table above.
+
 ![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
 ![Plot 2](https://github.com/user-attachments/assets/5b001a12-73d9-47cf-97e4-2e38e6107afa)
 ![Plot 3](https://github.com/user-attachments/assets/fe0a6cc1-6da0-4c62-b1df-7dc63f8de9f5)
