@@ -4,6 +4,8 @@ This repository was created to document Team Mecha35's methods of making a two-w
 
 ## Utilized Code:
 This code utilizes the files task_share.py and cotask.py from the ME 405 Support Library, as well as as the structure of basic_task.py. This repository can be found here: https://github.com/spluttflob/ME405-Support
+These files were used in accordance with the license included in the repository, which was subsequently added to this repository to ensure proper attribution.
+
 
 ## The Goal
 The following track was provided as the course Romi must drive. It includes:
