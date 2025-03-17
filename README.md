@@ -116,18 +116,6 @@ In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acryl
 All the components mounted onto the chassis is shown below.
 ![IMG_5030](https://github.com/user-attachments/assets/107a2a1d-a950-4250-a2ed-8bed43ad1a16)
 
-
-## Electrical Design
-## Analysis
-We performed analysis on the motor we received early on to experimentally determine theoretical gain, startup effort, and time constants for each motor shown below.
-| Parameter | Left Motor | Right Motor |
-| -------- | ------- |-------|
-| Motor Gain [rad/V*s]  | 4.045  |3.94|
-| Motor Startup Effort | 3.19%| 3.31% |
-|Time Constant [s]| 0.0874 |0.0895|
-
-![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
-
 ## Electrical Setup
 ### Motor and Encoder Wiring
 | Function | Pin | Notes |
@@ -177,3 +165,17 @@ We performed analysis on the motor we received early on to experimentally determ
 | Reset Pin | PB_2 | Is a notResetPin, so resets if pulled low|
 | IMU SDA | PB_9 | Alt function AF4_I2C |
 | IMU SCL | PB_8 | Alt function AF4_I2C |
+
+## Analysis
+We performed analysis on the motors we received early on to experimentally determine theoretical gain, startup effort, and time constants for each motor shown below. The startup effort was used as a starting point for offsetting the bias between the motors, so that a single input effort resulted in simultaneous startup from both motors. The values needed to be adjusted greatly to result in straight motion upon startup as expected from using theoretically determined values despite being based on experimental data. The time constants were deemed close enough to be negligible and the motor gains were outpaced by the proportional control constants and similar enough to have negligible effect. 
+| Parameter | Left Motor | Right Motor |
+| -------- | ------- |-------|
+| Motor Gain [rad/V*s]  | 4.045  |3.94|
+| Motor Startup Effort | 3.19%| 3.31% |
+|Time Constant [s]| 0.0874 |0.0895|
+
+The following plots were created from data collected from the left motor with similar analyis done on the right motor to get the values in the table above.
+![Plot 1](https://github.com/user-attachments/assets/0e66600a-3898-4324-8765-2998e958823b)
+![Plot 2](https://github.com/user-attachments/assets/5b001a12-73d9-47cf-97e4-2e38e6107afa)
+![Plot 3](https://github.com/user-attachments/assets/fe0a6cc1-6da0-4c62-b1df-7dc63f8de9f5)
+![Plot 4](https://github.com/user-attachments/assets/5e50ca57-d403-447a-8682-6f927afd30b9)
