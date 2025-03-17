@@ -1,6 +1,5 @@
 import gc
 import pyb
-import random
 from pyb import Pin, Timer, UART
 import cotask, task_share
 import encoderObj, motorObj,IRsensorObj, IRcontrollerObj, PIDobj, IMUObj, Bumper
@@ -366,7 +365,7 @@ def IMU_task(shares):
     i2c.init(pyb.I2C.CONTROLLER, baudrate=400000) # init as a controller
     MainObj = IMUObj.IMU(i2c,IMU_RST)
     
-    errortol = .3 #random.randint(50,100)/100
+    errortol = .3 # Range at which PID controller should switch to simple proportional control
     delayTimer = 0
     setup = False
 
