@@ -57,7 +57,7 @@ Components:
 
 In order to suspend the NUCLEO and Shoe of Brian above the Romi Chassis an acrylic adapter was connnected with standoffs. A 3D printed mount was also designed to connect both the IR sensor and the bump sensors. The IR sensor was too wide to mount directly on the chassis and extended past where the bump sensors mounted directly on the chassis, so a custom mount was design to connect both to the chassis. A CAD model of the mount is shown below as well as how it connects to the bump and IR sensors.
 
-![ME405 Term Project State Transition Diagrams](https://github.com/user-attachments/assets/cece6e82-4d74-4782-8cf9-77713ab1ba78)
+![ROMI IR and Bump Sensor Mount](https://github.com/user-attachments/assets/86ec684a-8dd7-47da-a822-b66707920ebe)
 ![ROMI Mount and Sensor Assembly](https://github.com/user-attachments/assets/56e1de6e-5c31-42a9-8684-dd2f80804367)
 
 All the components mounted onto the chassis is shown below.
